@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="% Alcohol Content per Beer" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0J9-oS-YCm">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phf-Ae-Jjf">
+                                <rect key="frame" x="240" y="125" width="120" height="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RlT-cx-5VF">
+                                <rect key="frame" x="241" y="75" width="118" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNy-1X-pDV">
+                                <rect key="frame" x="285" y="177" width="31" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="0J9-oS-YCm" firstAttribute="centerX" secondItem="RlT-cx-5VF" secondAttribute="centerX" id="3TQ-Vt-afM"/>
+                            <constraint firstItem="0J9-oS-YCm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3Wr-6R-Ug8"/>
+                            <constraint firstItem="phf-Ae-Jjf" firstAttribute="centerX" secondItem="RlT-cx-5VF" secondAttribute="centerX" id="45u-yx-ueT"/>
+                            <constraint firstItem="phf-Ae-Jjf" firstAttribute="top" secondItem="RlT-cx-5VF" secondAttribute="bottom" constant="20" id="Bgs-gT-fGv"/>
+                            <constraint firstItem="0J9-oS-YCm" firstAttribute="width" secondItem="RlT-cx-5VF" secondAttribute="width" id="NGo-8n-Xpu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gNy-1X-pDV" secondAttribute="trailing" constant="15" id="Oe1-fm-fB4"/>
+                            <constraint firstItem="gNy-1X-pDV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="Ont-W7-jZ9"/>
+                            <constraint firstItem="gNy-1X-pDV" firstAttribute="top" secondItem="phf-Ae-Jjf" secondAttribute="bottom" constant="15" id="Rmr-gE-yNg"/>
+                            <constraint firstItem="phf-Ae-Jjf" firstAttribute="width" secondItem="RlT-cx-5VF" secondAttribute="width" id="bTJ-tj-i3l"/>
+                            <constraint firstItem="0J9-oS-YCm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="deM-Fy-3xU"/>
+                            <constraint firstItem="RlT-cx-5VF" firstAttribute="top" secondItem="0J9-oS-YCm" secondAttribute="bottom" constant="17" id="mlV-Og-XVI"/>
+                            <constraint firstItem="0J9-oS-YCm" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="zS7-ab-hVS"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fLQ-of-N5o" appends="YES" id="bun-na-xwo"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fLQ-of-N5o"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
