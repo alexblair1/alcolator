@@ -34,6 +34,7 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    
 }
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self.beerPercentTextField resignFirstResponder];
